@@ -74,8 +74,12 @@ ${answers.questions}
 -------------------------------
     
 # Contact 
-## Github : ${answers.github}
-## Email : ${answers.email}`;
+
+## Github
+- [Link to Github Profile] (${answers.github})
+
+## Email
+- [Link to Email] (${answers.email})`;
 }
 
 
@@ -136,7 +140,7 @@ inquirer.prompt([
         // console.log(answers)
         const response = generateReadme(answers);
         // console.log(response);
-        fs.writeFile(`README.md`, generateReadme(answers), (err) => {
+        fs.writeFile(`newREADME.md`, generateReadme(answers), (err) => {
             err ? console.error(err) : console.log("Thank You! Your new README file is generated.")
         });
     })
